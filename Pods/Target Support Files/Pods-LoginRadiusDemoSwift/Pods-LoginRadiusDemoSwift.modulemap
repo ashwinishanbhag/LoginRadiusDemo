@@ -1,0 +1,6 @@
+framework module Pods_LoginRadiusDemoSwift {
+  umbrella header "Pods-LoginRadiusDemoSwift-umbrella.h"
+
+  export *
+  module * { export * }
+}
