@@ -56,7 +56,7 @@
 		202CB62A1E9F4C2600ACE086 /* LoginRadiusDemoSwift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LoginRadiusDemoSwift-Bridging-Header.h"; sourceTree = "<group>"; };
 		202CB62D1E9F513500ACE086 /* LoginRadiusSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LoginRadiusSDK.framework; path = "../../Library/Developer/Xcode/DerivedData/LoginRadiusDemoSwift-etfzbsfcvmjvuzaoqemcbghzwzcu/Build/Products/Debug-iphonesimulator/LoginRadiusSDK/LoginRadiusSDK.framework"; sourceTree = "<group>"; };
 		202CB6311E9F585700ACE086 /* ProfileDisplayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileDisplayViewController.swift; sourceTree = "<group>"; };
-		202CB63B1EA03EC800ACE086 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		202CB63B1EA03EC800ACE086 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		202CB63F1EA1554800ACE086 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		BD2151DFE763574AA6C3D632 /* Pods-LoginRadiusDemoSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoginRadiusDemoSwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LoginRadiusDemoSwift/Pods-LoginRadiusDemoSwift.debug.xcconfig"; sourceTree = "<group>"; };
 		DEFE18ED8A0EB54950A9AA92 /* Pods_LoginRadiusDemoSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LoginRadiusDemoSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -92,7 +92,6 @@
 		202CB5ED1E9F2CC700ACE086 = {
 			isa = PBXGroup;
 			children = (
-				202CB63B1EA03EC800ACE086 /* GoogleService-Info.plist */,
 				202CB5F81E9F2CC700ACE086 /* LoginRadiusDemoSwift */,
 				202CB5F71E9F2CC700ACE086 /* Products */,
 				811563B0BCB9C7389CA646C6 /* Pods */,
@@ -122,6 +121,7 @@
 				202CB6021E9F2CC700ACE086 /* LaunchScreen.storyboard */,
 				202CB6051E9F2CC700ACE086 /* Info.plist */,
 				202CB6271E9F41E400ACE086 /* LoginRadius.plist */,
+				202CB63B1EA03EC800ACE086 /* GoogleService-Info.plist */,
 				202CB62A1E9F4C2600ACE086 /* LoginRadiusDemoSwift-Bridging-Header.h */,
 			);
 			path = LoginRadiusDemoSwift;

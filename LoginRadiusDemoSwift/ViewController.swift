@@ -84,7 +84,7 @@ class ViewController: UIViewController, GIDSignInUIDelegate, GIDSignInDelegate{
             else
             {
                 
-                print(error?.localizedDescription ?? "no error")
+                print(error?.localizedDescription ?? "Error Occurred")
             }
         });
 
@@ -99,7 +99,6 @@ class ViewController: UIViewController, GIDSignInUIDelegate, GIDSignInDelegate{
         
         
         UserDefaults.standard.setValue("Facebook", forKey: "LoginMethod")
-
         
         LoginRadiusSocialLoginManager.sharedInstance().nativeFacebookLogin(withPermissions: ["fields":"first_name, last_name"], in: self, completionHandler: {
         (success,error) in
@@ -116,7 +115,8 @@ class ViewController: UIViewController, GIDSignInUIDelegate, GIDSignInDelegate{
             }
 
         }else{
-            print("Oops! Something went wrong");
+            print("Oops! Something went wrong")
+            print(error!.localizedDescription)
             }});
     }
     
@@ -135,6 +135,13 @@ class ViewController: UIViewController, GIDSignInUIDelegate, GIDSignInDelegate{
             if(success)
             {
                 print("Twitter Login Successful")
+                // Check if already login
+                let defaults = UserDefaults.standard
+                let user = defaults.integer(forKey: "isLoggedIn")
+                if (user == 1) {
+                    self.openProfileViewController()
+                }
+
                 
                 
             }else{
@@ -196,7 +203,6 @@ class ViewController: UIViewController, GIDSignInUIDelegate, GIDSignInDelegate{
                                                 print(error!.localizedDescription)
                                             }
                                         });**********/
-
         } else {
             print("\(error.localizedDescription)")
         }
