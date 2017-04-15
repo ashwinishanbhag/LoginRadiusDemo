@@ -10,6 +10,9 @@ import UIKit
 import LoginRadiusSDK
 import GoogleSignIn
 
+let CONSUMER_KEY = "xoRzL7blZ2HKwdq3ZpcM1Q7Y1"
+let CONSUMER_SECRET = "eWLoQuZ34L2oQ7XqgywSuKeYWudhKGAMaajlPsD7l6WCXv8zEC"
+
 
 class ViewController: UIViewController, GIDSignInUIDelegate, GIDSignInDelegate{
 
@@ -18,14 +21,10 @@ class ViewController: UIViewController, GIDSignInUIDelegate, GIDSignInDelegate{
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        // Initialize sign-in for Google Login
-        var configureError: NSError?
-        GGLContext.sharedInstance().configureWithError(&configureError)
-        assert(configureError == nil, "Error configuring Google services: \(String(describing: configureError))")
-        GIDSignIn.sharedInstance().delegate = self as GIDSignInDelegate
-        GIDSignIn.sharedInstance().uiDelegate = self
+        self.initializeGoogleSignIn()
         
     }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -75,7 +74,7 @@ class ViewController: UIViewController, GIDSignInUIDelegate, GIDSignInDelegate{
                 print(" Task Succesful")
                 if (action == "login")
                 {
-                    self.openProfileViewController()
+                    self.displayProfileViewIfLoggedIn()
                     
                 }
                 
@@ -106,14 +105,8 @@ class ViewController: UIViewController, GIDSignInUIDelegate, GIDSignInDelegate{
         {
             
             print("Facebook Login Successful");
+            self.displayProfileViewIfLoggedIn()
         
-            // Check if already login
-            let defaults = UserDefaults.standard
-            let user = defaults.integer(forKey: "isLoggedIn")
-            if (user == 1) {
-                self.openProfileViewController()
-            }
-
         }else{
             print("Oops! Something went wrong")
             print(error!.localizedDescription)
@@ -130,23 +123,17 @@ class ViewController: UIViewController, GIDSignInUIDelegate, GIDSignInDelegate{
         
         UserDefaults.standard.setValue("Twitter", forKey: "LoginMethod")
         
-        LoginRadiusSocialLoginManager.sharedInstance().nativeTwitter(withConsumerKey: "xoRzL7blZ2HKwdq3ZpcM1Q7Y1", consumerSecret: "eWLoQuZ34L2oQ7XqgywSuKeYWudhKGAMaajlPsD7l6WCXv8zEC", in: self, completionHandler: {
+        LoginRadiusSocialLoginManager.sharedInstance().nativeTwitter(withConsumerKey: CONSUMER_KEY, consumerSecret: CONSUMER_SECRET, in: self, completionHandler: {
             (success,error) in
             if(success)
             {
                 print("Twitter Login Successful")
-                // Check if already login
-                let defaults = UserDefaults.standard
-                let user = defaults.integer(forKey: "isLoggedIn")
-                if (user == 1) {
-                    self.openProfileViewController()
-                }
-
+                self.displayProfileViewIfLoggedIn()
                 
                 
             }else{
-                print("Oops! Something went wrong")
-                print(error!.localizedDescription)
+                let errorMessage: String = (error?.localizedDescription)!
+                self.alert(message:errorMessage)
             }
         });
     }
@@ -215,10 +202,27 @@ class ViewController: UIViewController, GIDSignInUIDelegate, GIDSignInDelegate{
         // ...
     }
     
+    func initializeGoogleSignIn() {
+        // Initialize sign-in for Google Login
+        var configureError: NSError?
+        GGLContext.sharedInstance().configureWithError(&configureError)
+        assert(configureError == nil, "Error configuring Google services: \(String(describing: configureError))")
+        GIDSignIn.sharedInstance().delegate = self as GIDSignInDelegate
+        GIDSignIn.sharedInstance().uiDelegate = self
+    }
 
     
-    public func openProfileViewController () {
+    func openProfileViewController () {
         self.performSegue(withIdentifier: "profileDisplaySegue", sender: self);
+    }
+    
+    func displayProfileViewIfLoggedIn() {
+        // Check if already login
+        let defaults = UserDefaults.standard
+        let user = defaults.integer(forKey: "isLoggedIn")
+        if (user == 1) {
+            self.openProfileViewController()
+        }
     }
 
     
