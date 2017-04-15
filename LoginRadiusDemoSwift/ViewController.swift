@@ -10,8 +10,6 @@ import UIKit
 import LoginRadiusSDK
 import GoogleSignIn
 
-let CONSUMER_KEY = "xoRzL7blZ2HKwdq3ZpcM1Q7Y1"
-let CONSUMER_SECRET = "eWLoQuZ34L2oQ7XqgywSuKeYWudhKGAMaajlPsD7l6WCXv8zEC"
 
 
 class ViewController: UIViewController, GIDSignInUIDelegate, GIDSignInDelegate{
@@ -123,6 +121,10 @@ class ViewController: UIViewController, GIDSignInUIDelegate, GIDSignInDelegate{
         
         UserDefaults.standard.setValue("Twitter", forKey: "LoginMethod")
         
+        let CONSUMER_KEY = valueForAPIKey(named:"API_KEY")
+        let CONSUMER_SECRET = valueForAPIKey(named:"API_SECRET")
+        
+
         LoginRadiusSocialLoginManager.sharedInstance().nativeTwitter(withConsumerKey: CONSUMER_KEY, consumerSecret: CONSUMER_SECRET, in: self, completionHandler: {
             (success,error) in
             if(success)

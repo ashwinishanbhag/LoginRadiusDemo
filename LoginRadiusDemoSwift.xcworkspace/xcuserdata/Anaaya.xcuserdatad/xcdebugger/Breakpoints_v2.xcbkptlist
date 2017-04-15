@@ -19,5 +19,53 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LoginRadiusDemoSwift/ViewController.swift"
+            timestampString = "513920339.383822"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "127"
+            endingLineNumber = "127"
+            landmarkName = "loginUsingTwitter(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "LoginRadiusDemoSwift.ViewController.loginUsingTwitter (Any) -&gt; ()"
+                  moduleName = "LoginRadiusDemoSwift"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Anaaya/Documents/LoginRadiusDemoSwift/LoginRadiusDemoSwift/ViewController.swift"
+                  timestampString = "513920340.958887"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "128"
+                  endingLineNumber = "128"
+                  offsetFromSymbolStart = "457">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "LoginRadiusDemoSwift.ViewController.(loginUsingTwitter (Any) -&gt; ()).(closure #1)"
+                  moduleName = "LoginRadiusDemoSwift"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Anaaya/Documents/LoginRadiusDemoSwift/LoginRadiusDemoSwift/ViewController.swift"
+                  timestampString = "513920340.961917"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "130"
+                  endingLineNumber = "130"
+                  offsetFromSymbolStart = "30">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

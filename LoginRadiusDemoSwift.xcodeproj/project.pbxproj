@@ -21,6 +21,8 @@
 		202CB6401EA1554800ACE086 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 202CB63F1EA1554800ACE086 /* icon.png */; };
 		202CB6411EA1554800ACE086 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 202CB63F1EA1554800ACE086 /* icon.png */; };
 		202CB6421EA1554800ACE086 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 202CB63F1EA1554800ACE086 /* icon.png */; };
+		20A9BE051EA1CBDA00A1541E /* ApiKeys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 20A9BE041EA1CBDA00A1541E /* ApiKeys.plist */; };
+		20A9BE071EA1CC7400A1541E /* ApiKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A9BE061EA1CC7400A1541E /* ApiKeys.swift */; };
 		E7C3EB6011540753C4AF6C9C /* Pods_LoginRadiusDemoSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEFE18ED8A0EB54950A9AA92 /* Pods_LoginRadiusDemoSwift.framework */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +60,8 @@
 		202CB6311E9F585700ACE086 /* ProfileDisplayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileDisplayViewController.swift; sourceTree = "<group>"; };
 		202CB63B1EA03EC800ACE086 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		202CB63F1EA1554800ACE086 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		20A9BE041EA1CBDA00A1541E /* ApiKeys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ApiKeys.plist; sourceTree = "<group>"; };
+		20A9BE061EA1CC7400A1541E /* ApiKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiKeys.swift; sourceTree = "<group>"; };
 		BD2151DFE763574AA6C3D632 /* Pods-LoginRadiusDemoSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoginRadiusDemoSwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LoginRadiusDemoSwift/Pods-LoginRadiusDemoSwift.debug.xcconfig"; sourceTree = "<group>"; };
 		DEFE18ED8A0EB54950A9AA92 /* Pods_LoginRadiusDemoSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LoginRadiusDemoSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -115,6 +119,7 @@
 				202CB6431EA1586F00ACE086 /* Images */,
 				202CB5F91E9F2CC700ACE086 /* AppDelegate.swift */,
 				202CB5FB1E9F2CC700ACE086 /* ViewController.swift */,
+				20A9BE061EA1CC7400A1541E /* ApiKeys.swift */,
 				202CB6311E9F585700ACE086 /* ProfileDisplayViewController.swift */,
 				202CB5FD1E9F2CC700ACE086 /* Main.storyboard */,
 				202CB6001E9F2CC700ACE086 /* Assets.xcassets */,
@@ -123,6 +128,7 @@
 				202CB6271E9F41E400ACE086 /* LoginRadius.plist */,
 				202CB63B1EA03EC800ACE086 /* GoogleService-Info.plist */,
 				202CB62A1E9F4C2600ACE086 /* LoginRadiusDemoSwift-Bridging-Header.h */,
+				20A9BE041EA1CBDA00A1541E /* ApiKeys.plist */,
 			);
 			path = LoginRadiusDemoSwift;
 			sourceTree = "<group>";
@@ -264,6 +270,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20A9BE051EA1CBDA00A1541E /* ApiKeys.plist in Resources */,
 				202CB6281E9F41E400ACE086 /* LoginRadius.plist in Resources */,
 				202CB6041E9F2CC700ACE086 /* LaunchScreen.storyboard in Resources */,
 				202CB6401EA1554800ACE086 /* icon.png in Resources */,
@@ -348,6 +355,7 @@
 			files = (
 				202CB6321E9F585700ACE086 /* ProfileDisplayViewController.swift in Sources */,
 				202CB5FC1E9F2CC700ACE086 /* ViewController.swift in Sources */,
+				20A9BE071EA1CC7400A1541E /* ApiKeys.swift in Sources */,
 				202CB5FA1E9F2CC700ACE086 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
